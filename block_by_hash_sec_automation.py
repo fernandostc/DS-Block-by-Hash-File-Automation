@@ -1,11 +1,12 @@
 import json
+import getpass
 
 from dsp3.models.manager import Manager
 
 #Interactive ask information to dont use the hardcode information
 tenant_info = str(input("Tenant: "))
 user_info = str(input("Username: "))
-password_info = str(input("Password: "))
+password_info = getpass.getpass("Password: ")
 
 dsm = Manager(tenant=tenant_info,username=user_info, password=password_info)
 
@@ -41,6 +42,10 @@ while (case != 6):
 			message = json.loads(detail)
 			print (message)
 			print ('\n')
+		
+		input("Press Enter to continue...")
+		print ("\n" * 100)
+		
 		case = 0
 
 	elif case == 2:
@@ -54,6 +59,10 @@ while (case != 6):
 				print ("SHA 265: " + into['sha256'])
 				print ("Description: " + into['description'])
 				print ("Action: " + into['action'] + '\n')
+		
+		input("Press Enter to continue...")
+		print ("\n" * 100)
+		
 		case = 0
 
 	elif case == 3:
@@ -65,6 +74,10 @@ while (case != 6):
 				ruleid = into['ruleID']
 				dsm.delete_block_by_hash_rule(ruleid)
 				print ("The hash was deleted with successful")
+		
+		input("Press Enter to continue...")
+		print ("\n" * 100)
+		
 		case = 0
 
 	elif case == 4:
@@ -80,6 +93,10 @@ while (case != 6):
 					ruleid = into['ruleID']
 					dsm.delete_block_by_hash_rule(ruleid)
 					print ("The hash was deleted with successful" + '\n')
+		
+		input("Press Enter to continue...")
+		print ("\n" * 100)
+		
 		case = 0
 
 
@@ -87,6 +104,10 @@ while (case != 6):
 		parsed = dsm.list_block_by_hash_rules()
 		print (json.dumps(parsed, indent=4, sort_keys=True))
 		print ('\n')
+		
+		input("Press Enter to continue...")
+		print ("\n" * 100)
+		
 		case = 0
 	
 	elif case == 6:
