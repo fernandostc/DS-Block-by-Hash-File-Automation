@@ -3,12 +3,12 @@ Security Automation by block hash files using Deep Security API's
 
 A Python 3 script using DSP3 SDK for Deep Security to create a Security automation for hash files.
 
-Following the current functionalities today
-	1. Add File Hash by text file
-	2. Search by Hash
-	3. Delete File Hash by Hash
-	4. Delete File Hash by text file
-	5. List File Hashes
+Following the current functionalities:
+1. Add File Hash by text file
+2. Search by Hash
+3. Delete File Hash by Hash
+4. Delete File Hash by text file
+5. List File Hashes
 
 
 # Creating the Environment to use the Python3 script
