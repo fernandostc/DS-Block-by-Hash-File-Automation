@@ -14,7 +14,10 @@ Following the current functionalities:
 # Creating the Environment to use the Python3 script
 
 :rotating_light:`To make it easy there is an install bash file that you could run to install everything automatically`
+
+```sh
 $ ./install.sh
+```
 
 ### Create a [virtualenv] to install [DSP3]
 
