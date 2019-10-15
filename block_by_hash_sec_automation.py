@@ -3,12 +3,22 @@ import getpass
 
 from dsp3.models.manager import Manager
 
+
+
 #Interactive ask information to dont use the hardcode information
 tenant_info = str(input("Tenant: "))
 user_info = str(input("Username: "))
 password_info = getpass.getpass("Password: ")
 
-dsm = Manager(tenant=tenant_info,username=user_info, password=password_info)
+host_info = str(input("DSM Hostname or IP: "))
+port_info = str(input("DSM port: "))
+
+
+if (host_info != None):
+	dsm = Manager(username="username", password="password", host="hostname", port="port")   #On Prem DSM Example
+else:
+	dsm = Manager(tenant=tenant_info,username=user_info, password=password_info) #DSaaS example
+
 
 #You could hard code the tenant, user and password if you would like, following example:
 #dsm = Manager(tenant="tenant",username="user", password="password")
