@@ -22,8 +22,8 @@ $ ./install.sh
 ### Create a [virtualenv] to install [DSP3]
 
 ```sh
-$ virtualenv -p python3 --no-site-packages AlexaLab
-$ . AlexaLab/bin/activate
+$ virtualenv -p python3 --no-site-packages DS_block_by_hash
+$ . DS_block_by_hash/bin/activate
 ```
 
 ### Install [DSP3] inside the virtualenv
@@ -38,7 +38,7 @@ $ . AlexaLab/bin/activate
 * Install DSP3 inside virtualenv
 
 ```sh
-  $ pip install -i https://testpypi.python.org/pypi dsp3
+  $ pip install dsp3
 ```
 
 # Project Files Description

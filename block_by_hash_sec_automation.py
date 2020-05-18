@@ -10,14 +10,12 @@ tenant_info = str(input("Tenant: "))
 user_info = str(input("Username: "))
 password_info = getpass.getpass("Password: ")
 
-host_info = str(input("DSM Hostname or IP: "))
-port_info = str(input("DSM port: "))
-
-
-if (host_info != None):
-	dsm = Manager(username="username", password="password", host="hostname", port="port")   #On Prem DSM Example
+host_info = str(input("DSM Hostname or IP (if you are using DSaaS just Press Enter): "))
+if (host_info == None):
+    port_info = str(input("DSM port: "))
+    dsm = Manager(username="username", password="password", host="hostname", port="port")   #On Prem DSM Example
 else:
-	dsm = Manager(tenant=tenant_info,username=user_info, password=password_info) #DSaaS example
+    dsm = Manager(tenant=tenant_info,username=user_info, password=password_info) #DSaaS example
 
 
 #You could hard code the tenant, user and password if you would like, following example:
@@ -124,6 +122,3 @@ while (case != 6):
 		print ("Thank you! We will close the session with Deep Security." + '\n')
 		dsm.end_session()
 		exit
-	
-
-
