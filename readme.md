@@ -52,7 +52,7 @@ $ . DS_block_by_hash/bin/activate
 # Next Features (Planning)
   * Add Hash file by Hash
   
-:warning:`OBS:. This is an Open Source project that can anyone help to develop new calls or features to help everyone that would like to use voice control for security automation.`
+:warning:`OBS:. This is an Open Source project that can anyone help to develop for security automation.`
 
 [//]: # (External Links)
 [virtualenv]:https://virtualenv.pypa.io/en/stable/
