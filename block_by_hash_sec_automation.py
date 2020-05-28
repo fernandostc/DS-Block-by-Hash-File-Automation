@@ -3,8 +3,6 @@ import getpass
 
 from dsp3.models.manager import Manager
 
-
-
 #Interactive ask information to dont use the hardcode information
 tenant_info = str(input("Tenant: "))
 user_info = str(input("Username: "))
@@ -29,7 +27,7 @@ while (case != 6):
 	print ("##########################################################################################################################" + '\n')
 	print ("Welcome to Deep Security Security Automation tool for Global Trusted Hash Files" + '\n')
 	print ("Following below the actions allowed today from this tool:" + '\n')
-	print('1 - Add File Hash by text file')
+	print('1 - Add Hashes through TEXT file')
 	print('2 - Search by Hash')
 	print('3 - Delete File Hash by hash')
 	print('4 - Delete File Hash by text file')
