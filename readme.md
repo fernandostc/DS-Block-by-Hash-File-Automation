@@ -61,7 +61,8 @@ $ . DS_block_by_hash/bin/activate
 | add_file_hash.txt | TEXT file example to use in option 1 to add one or more hash file with description to Deep Security |
 
 # Next Features (Planning)
-  * Add Hash file by Hash
+  * Add Hash directly withou TEXT file
+  * Support API Key authentication on Deep Security
   
 :warning:`OBS:. This is an Open Source project that can anyone help to develop for security automation.`
 
