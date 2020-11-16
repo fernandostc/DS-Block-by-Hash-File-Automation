@@ -7,13 +7,16 @@ from dsp3.models.manager import Manager
 tenant_info = str(input("Tenant: "))
 user_info = str(input("Username: "))
 password_info = getpass.getpass("Password: ")
-
 host_info = str(input("DSM Hostname or IP (if you are using DSaaS just Press Enter): "))
+
 if (host_info == None):
-    port_info = str(input("DSM port: "))
-    dsm = Manager(username="username", password="password", host="hostname", port="port")   #On Prem DSM Example
+	dsm = Manager(tenant=tenant_info,username=user_info, password=password_info) #DSaaS example
 else:
-    dsm = Manager(tenant=tenant_info,username=user_info, password=password_info) #DSaaS example
+	port_info = str(input("DSM port: "))
+	if (tenant_info == None):
+		dsm = Manager(username=user_info, password=password_info, host=host_info, port=port_info)   #On Prem DSM Example
+	else:
+		dsm = Manager(tenant=tenant_info, username=user_info, password=password_info, host=host_info, port=port_info) #On Prem DSM Example with Tenant enable
 
 
 #You could hard code the tenant, user and password if you would like, following example:
